@@ -1,0 +1,62 @@
+.footer {
+    padding: 70px 0 55px;
+    background: $c-main;
+    color: #fff;
+
+    &__inner {
+        text-align: center;
+    }
+
+    &__logo {
+        display: inline-block;
+        color: #fff;
+        font-weight: 600;
+        line-height: 20px;
+        margin-bottom: 27px;
+    }
+
+    &__slogan {
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 60px;
+        letter-spacing: 1px;
+        color: $c-second;
+        margin-bottom: 48px;
+
+    }
+
+    &__menu {
+        justify-content: center;
+        margin-bottom: 58px;
+
+        &-link {
+            color: #fff;
+            margin: 0 22px;
+        }
+    }
+
+    &__copyright {
+        font-size: 14px;
+        margin-bottom: 44px;
+    }    
+}
+
+.socials__link {
+    margin-right: 75px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+// media queries
+
+@media (max-width: 650px) {
+    .footer__menu {
+        flex-direction: column;
+
+        &-link {
+            display: inline-block;
+            margin: 0 0 20px;
+        }
+    }
+}

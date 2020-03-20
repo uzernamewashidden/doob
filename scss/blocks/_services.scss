@@ -1,0 +1,120 @@
+.services {
+    padding: 110px 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__heading {
+        flex-basis: 35%;
+    }
+    &__title {
+        font-size: 45px;
+        line-height: 62px;
+        font-weight: 600;
+        margin-bottom: 45px;
+    }
+
+    &__button {        
+        @include main-button;
+        font-size: 14px;
+    }
+}
+
+.services-list {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 62%;
+
+    &__item {
+        max-width: 325px;
+        padding: 35px;
+        box-shadow: 2px 4px 10px 0px rgba(25,44,51,0.15);
+        transition: all 300ms;
+        &:hover {
+            box-shadow: 2px 4px 20px 0px rgba(25,44,51,0.35);
+        }
+    }
+
+    &__icon {
+        margin-bottom: 60px;
+    }
+
+    &__title {
+        font-size: 28px;
+        line-height: 40px;
+        font-weight: 600;
+        margin-bottom: 40px;
+    }
+
+    &__description {
+        font-size: 14px;
+        line-height: 23px;
+    }
+}
+
+// media queries
+@media (max-width: 1200px) {
+    .services__inner {
+        flex-direction: column;
+    }
+
+    .services__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    .services__title {
+        flex-basis: 60%;
+        margin-bottom: 0;
+    }
+
+    .services-list {
+        justify-content: center;
+    }
+
+    .services-list__item {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services__title {
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+        &__item {
+            max-width: 90%;
+            margin: 0 0 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__title {
+            font-size: 22px;
+        }
+    }    
+}
+
+@media (max-width: 540px) {
+    .services__heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .services__title {
+        margin-bottom: 25px;
+    }
+
+    .services-list__item {
+        max-width: 100%;
+    }
+}

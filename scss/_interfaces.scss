@@ -1,0 +1,60 @@
+@mixin section-title {
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 600;
+}
+
+@mixin section-subtitle {
+    font-weight: 600;
+    line-height: 20px;
+    color: $c-second;
+}
+
+@mixin main-button {
+    padding: 20px 35px;
+    background: $c-second;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.4s ease-out;
+    box-shadow: 2px 4px 10px 0px rgba(255,57,69,0.15);
+    &:hover {
+        box-shadow: 2px 4px 10px 0px rgba(255,57,69,0.9);
+        cursor: pointer;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    color: $c-main;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input, textarea {
+    border: none;
+    outline: none;
+    font: inherit;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1170px;
+    margin: auto;
+}
+
+.button {
+    box-shadow: 2px 4px 10px 0px rgba(255,57,69,0.15);
+    background: $c-second;
+    color: #fff;
+    font-weight: 600;
+}
