@@ -51,6 +51,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Work Sans', sans-serif;
   color: #314584;
@@ -163,13 +167,15 @@ button, input, textarea {
   left: 0;
   background: #ff3946;
   position: absolute;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  opacity: 0;
+  -webkit-transition: width 0.3s ease-out, opacity 0.5s ease-out;
+  -o-transition: width 0.3s ease-out, opacity 0.5s ease-out;
+  transition: width 0.3s ease-out, opacity 0.5s ease-out;
 }
 
 .menu__link:hover:after {
   width: 100%;
+  opacity: 1;
 }
 
 .menu-icon {
@@ -372,13 +378,12 @@ button, input, textarea {
   .navbar {
     position: absolute;
     background: #fff;
-    width: 95%;
+    width: 100%;
+    min-height: 50vh;
     opacity: 0;
-    left: 50%;
+    left: -100%;
     top: 80px;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    top: 0;
     border-radius: 2px;
     -webkit-box-shadow: 2px 4px 10px 0px rgba(25, 44, 51, 0.15);
             box-shadow: 2px 4px 10px 0px rgba(25, 44, 51, 0.15);
@@ -392,12 +397,15 @@ button, input, textarea {
         -ms-flex-direction: column;
             flex-direction: column;
     z-index: 0;
-    -webkit-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
+    -webkit-transition: opacity 0.5s ease-out;
+    -o-transition: opacity 0.5s ease-out;
+    transition: opacity 0.5s ease-out;
   }
   .navbar_active {
     z-index: 10;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
     opacity: 1;
   }
   .navbar__logo {
@@ -432,10 +440,13 @@ button, input, textarea {
   }
   .menu-icon {
     display: block;
+    z-index: 10;
   }
-  .hero__right::after {
-    top: 10px;
-    right: 25%;
+  .hero__left {
+    padding: 20px 0;
+  }
+  .hero__right {
+    display: none;
   }
 }
 
@@ -734,6 +745,10 @@ button, input, textarea {
   }
   .about__title {
     margin-bottom: 30px;
+    max-width: 570px;
+  }
+  .about__text {
+    max-width: 780px;
   }
 }
 
